@@ -16,6 +16,7 @@ wash <- read.csv("C:/Users/BELHABICH/Desktop/Yacine/1 Entrepreunariat/1 Analytic
 # Load packages 
 ```{r Packages}
 library(tidyverse)
+library(ggplot2)
 ```
 
 
