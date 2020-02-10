@@ -1,15 +1,15 @@
 ### Date created
-Include the date you created this project and README file.
+Fabruary 10, 2020
 
 ### Project Title
-Replace the Project Title
+Bike Share data EDA.
 
 ### Description
-Describe what your project is about and what it does
+DDiscovering bike share data for Three US cities: Whashington, New York and Chicago.
 
 ### Files used
-Include the files used
+chicago.csv, new-york-city.csv & washington.csv from udacity's "R Programming for DS nanodegree".
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+I first forked the following repo: https://github.com/udacity/pdsnd_github
 
