@@ -1,0 +1,166 @@
+Project for the R programming section 
+========================================================
+
+***
+
+### Read data 
+
+```{r Get data}
+ch <- read.csv("C:/Users/BELHABICH/Desktop/Yacine/1 Entrepreunariat/1 Analytics Business Consulting/5 Training/1 Tech leaders AAL/1 Udacity Support/2 R PROGRAMMING/5 Project/chicago.csv")
+
+ny <- read.csv("C:/Users/BELHABICH/Desktop/Yacine/1 Entrepreunariat/1 Analytics Business Consulting/5 Training/1 Tech leaders AAL/1 Udacity Support/2 R PROGRAMMING/5 Project/new-york-city.csv")
+
+wash <- read.csv("C:/Users/BELHABICH/Desktop/Yacine/1 Entrepreunariat/1 Analytics Business Consulting/5 Training/1 Tech leaders AAL/1 Udacity Support/2 R PROGRAMMING/5 Project/washington.csv")
+```
+
+# Load packages 
+```{r Packages}
+library(tidyverse)
+```
+
+
+# Discovering chicago data
+```{r }
+glimpse(ch)
+names(ch) 
+```
+
+
+```{r }
+glimpse(ny)
+names(ny) 
+```
+***
+
+```{r }
+glimpse(wash)
+names(wash) 
+```
+
+***
+```{r }
+names(ny)
+```
+
+```{r }
+names(wash)
+```
+
+```{r }
+names(ch)
+```
+
+
+#1 Popular times of travel (i.e., occurs most often in the start time)
+
+    
+***
+```{r }
+ny3 <- ny2 %>% 
+  group_by(Gender) %>%
+  summarise(Average_duration = round(mean(Trip.Duration), 2), 
+            Media_duration = round(median(Trip.Duration), 2), 
+            SD_duration = round(sd(Trip.Duration), 2)
+            ) 
+ny3
+
+```
+
+***
+
+```{r }
+ggplot(ny2, aes(x = Trip.Duration)) + 
+xlim(0, 3500) + 
+geom_density()+ 
+ggtitle("Male-Female comparaison according to trip duration") + 
+labs(x = "Trip duration", y = "Trip duration's Density")+
+facet_wrap(~Gender ) 
+
+```
+
+
+
+```{r }
+chi3 <- chi2 %>% 
+  group_by(Gender) %>%
+  summarise(Average_duration = round(mean(Trip.Duration), 2), 
+            Media_duration = round(median(Trip.Duration), 2), 
+            SD_duration = round(sd(Trip.Duration), 2)
+            ) 
+chi3
+```
+
+
+
+```{r }
+ggplot(chi2, aes(x = Trip.Duration)) + 
+xlim(0, 3500) + 
+geom_density()+ 
+ggtitle("Male-Female comparaison according to trip duration") + 
+labs(x = "Trip duration", y = "Trip duration's Density")+
+facet_wrap(~Gender ) 
+```
+
+
+```{r }
+library(tidyverse)
+
+```
+
+
+
+    What is the most common day of week?
+    What is the most common hour of day?
+
+#2 Popular stations and trip
+
+    What is the most common start station?
+    What is the most common end station?
+    What is the most common trip from start to end (i.e., most frequent combination of start station and end station)?
+
+#3 Trip duration
+
+    What is the total travel time for users in different cities?
+    What is the average travel time for users in different cities?
+
+#4 User info
+
+    What are the counts of each user type?
+    What are the counts of each gender (only available for NYC and Chicago)?
+    What are the earliest, most recent, most common year of birth (only available for NYC and Chicago)?
+
+
+***
+```{r Scatterplots}
+
+```
+
+***
+
+***
+```{r Scatterplots}
+
+```
+
+***
+
+***
+```{r Scatterplots}
+
+```
+
+***
+
+***
+```{r Scatterplots}
+
+```
+
+***
+
+***
+```{r Scatterplots}
+
+```
+
+***
